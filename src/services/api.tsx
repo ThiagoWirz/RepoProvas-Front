@@ -50,3 +50,10 @@ export async function getTestsByDisciplines(token: string) {
 
   return response;
 }
+
+export async function getTestsByTeachers(token: string) {
+  const config = createConfig(token);
+  const response = await axios.get(`${BASE_URL}/tests/teachers`, config);
+
+  return response;
+}

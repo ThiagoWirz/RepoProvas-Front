@@ -1,11 +1,10 @@
 import { Container } from "@mui/material";
-import useAuth from "../../hooks/useAuth";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import ButtonBox from "../../components/ButtonBox";
 import TestByDisciplines from "../../components/Tests/Disciplines";
+import TestByTeachers from "../../components/Tests/Teachers";
 
 export default function HomePage() {
-  const { auth } = useAuth();
   const [selected, setSelected] = useState("DISCIPLINA");
 
   return (
@@ -21,7 +20,7 @@ export default function HomePage() {
         }}
       >
         {selected === "DISCIPLINA" && <TestByDisciplines />}
-        {selected === "PESSOA INSTRUTORA" && <h1>MIAJUDA2</h1>}
+        {selected === "PESSOA INSTRUTORA" && <TestByTeachers />}
         {selected === "ADICIONAR" && <h1>MIAJUDA3</h1>}
       </Container>
     </Container>

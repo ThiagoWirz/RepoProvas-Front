@@ -12,7 +12,6 @@ import { BsChevronExpand } from "react-icons/bs";
 export default function TestByDisciplines() {
   const [data, setData] = useState([]);
   const { auth } = useAuth();
-  console.log(data);
 
   async function getTests() {
     const response = await api.getTestsByDisciplines(auth.token);
