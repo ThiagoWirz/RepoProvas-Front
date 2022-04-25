@@ -58,9 +58,6 @@ export default function SignUp() {
           alignItems: "center",
         }}
       >
-        <Grid item xs={12}>
-          <img src={Logo} alt="RepoProvas" />
-        </Grid>
         <Box
           sx={{
             marginTop: 15,

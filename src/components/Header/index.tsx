@@ -1,7 +1,7 @@
 import Logo from "../../assets/Logo.png";
 import { Grid, Avatar, Container, Divider } from "@mui/material";
 import useAuth from "../../hooks/useAuth";
-import { LogoutOutlined } from "@mui/icons-material";
+import { GrLogout } from "react-icons/gr";
 import * as api from "../../services/api";
 import { useNavigate } from "react-router-dom";
 
@@ -37,10 +37,8 @@ export default function Header() {
               <Grid item xs={12} sm={6} alignSelf="left">
                 <img src={Logo} alt="RepoProvas" />
               </Grid>
-              <Grid item xs={12} sm={6} alignSelf="right">
-                <Avatar sx={{ m: 1, bgcolor: "#3F61d7" }}>
-                  <LogoutOutlined onClick={logOut} />
-                </Avatar>
+              <Grid item xs={12} sm={6} display="flex" alignContent="right">
+                <GrLogout fontSize={30} onClick={logOut} />
               </Grid>
             </>
           ) : (

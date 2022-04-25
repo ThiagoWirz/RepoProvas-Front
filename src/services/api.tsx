@@ -36,3 +36,10 @@ export async function logOut(token: string) {
   const config = createConfig(token);
   await axios.delete(`${BASE_URL}/logout`, config);
 }
+
+export async function getTests(token: string) {
+  const config = createConfig(token);
+  const tests = await axios.get(`${BASE_URL}/tests`, config);
+
+  return tests;
+}
