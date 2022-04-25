@@ -43,3 +43,10 @@ export async function getTests(token: string) {
 
   return tests;
 }
+
+export async function getTestsByDisciplines(token: string) {
+  const config = createConfig(token);
+  const response = await axios.get(`${BASE_URL}/tests/disciplines`, config);
+
+  return response;
+}
